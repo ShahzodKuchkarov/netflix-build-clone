@@ -2,6 +2,7 @@ import axios from './axios';
 import React, { useEffect, useState } from 'react'
 import './Banner.css'
 import requests from './Request';
+/* import Typed from 'react-typed' */
 
 function Banner() {
 
@@ -27,6 +28,9 @@ function Banner() {
         return string?.length > n ? string.substr(0, n - 1) + `...` : string;
     }
 
+
+
+
     return (
         <header className="banner" style={{
             backgroundSize: "cover",
@@ -36,12 +40,20 @@ function Banner() {
             <div className="banner__contents">
                 <h1 className="banner__title">
                     {movie?.title || movie?.name || movie?.original_name}
+                    {/*     <Typed
+                        strings={[`${name}`]}
+                        typeSpeed={50}
+                    /> */}
                 </h1>
                 <div className="banner__buttons">
                     <button className="banner__button">Play</button>
                     <button className="banner__button">My List</button>
                 </div>
                 <h1 className="banner__description">
+                    {/*  <Typed
+                        strings={[overview]}
+                        typeSpeed={50}
+                    /> */}
                     {truncate(movie?.overview, 150)}
                 </h1>
             </div>

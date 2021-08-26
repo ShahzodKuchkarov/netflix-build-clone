@@ -2,8 +2,11 @@ import axios from './axios';
 import React, { useEffect, useState } from 'react'
 import './Row.css'
 import requests from './Request';
+import Loader from './components/Loader'
 
 function Row({ title, fetchUrl, isLargeRow = false }) {
+
+    const [loading, setLoading] = useState(false);
 
     const [movies, setMovies] = useState([]);
 
@@ -11,15 +14,27 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(fetchUrl);
-            setMovies(request.data.results);
-            return requests;
+            setLoading(true);
+            try {
+                const request = await axios.get(fetchUrl);
+                setMovies(request.data.results);
+                setLoading(false)
+                return requests;
+
+            }
+            catch {
+                setLoading(false)
+            }
+
         }
         fetchData();
     }, [fetchUrl]);
 
     return (
         <div className="row">
+            <Loader
+                loading={loading}
+            />
             <h2>{title}</h2>
             <div className="row__posters">
                 {movies.map(
