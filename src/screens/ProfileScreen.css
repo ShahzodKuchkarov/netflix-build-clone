@@ -59,3 +59,30 @@
 .profileScreen__info>img {
     height: 100px;
 }
+
+.profileScreen__plans .subs {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-size: 14px;
+    color: rgb(168, 163, 163);
+}
+
+.profileScreen__plans .subs:hover {
+    background-color: #14181a;
+    color: #fff;
+}
+
+.profileScreen__plans .subs:hover button {
+    background-color: #e50914;
+    color: #fff;
+}
+
+.profileScreen__subscribe {
+    padding: 3px 10px;
+    font-size: 1rem;
+    color: rgb(168, 163, 163);
+    background-color: #b62229;
+    border: none;
+    cursor: pointer;
+}

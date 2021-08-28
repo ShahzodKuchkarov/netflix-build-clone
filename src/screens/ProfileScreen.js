@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import Nav from '../Nav';
 import './ProfileScreen.css';
@@ -27,12 +27,24 @@ function ProfileScreen() {
                         <h2>{user.email}</h2>
                         <div className="profileScreen__plans">
                             <h3>Plans</h3>
+                            <div className="profileScreen__standard subs">
+                                <span>Netflix Standard - 1080p</span>
+                                <button className="profileScreen__subscribe">Subscribe</button>
+                            </div>
+                            <div className="profileScreen__basic subs">
+                                <span> Netflix Basic - 480p</span>
+                                <button className="profileScreen__subscribe">Subscribe</button>
+                            </div>
+                            <div className="profileScreen__premium subs">
+                                <span>Netflix Premium - 4K+HDR</span>
+                                <button className="profileScreen__subscribe">Subscribe</button>
+                            </div>
                             <button onClick={signOut} className="profileScreen__signOut">Sign Out</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

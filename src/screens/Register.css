@@ -1,0 +1,46 @@
+.register {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.register>form>h1 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.register>form>h3 {
+    text-align: left;
+    margin: 0;
+    color: red;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+
+.register>form {
+    display: grid;
+    flex-direction: column;
+}
+
+.register>form>input {
+    outline-width: 0;
+    height: 40px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 15px;
+}
+
+.register>form>button {
+    padding: 16px 20px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #e50914;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
