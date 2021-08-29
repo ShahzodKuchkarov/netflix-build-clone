@@ -10,6 +10,9 @@
     padding: 20px;
 }
 
+/* .row__posters__titles {
+    display: none;
+} */
 
 .row__posters::-webkit-scrollbar {
     display: none;

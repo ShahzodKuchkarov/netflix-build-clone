@@ -20,7 +20,6 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
                 setMovies(request.data.results);
                 setLoading(false)
                 return requests;
-
             }
             catch {
                 setLoading(false)
@@ -29,6 +28,7 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
         }
         fetchData();
     }, [fetchUrl]);
+    console.log(movies);
 
     return (
         <div className="row">
@@ -37,6 +37,7 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
             />
             <h2>{title}</h2>
             <div className="row__posters">
+
                 {movies.map(
                     (movie) =>
                         ((isLargeRow && movie.poster_path) ||
@@ -46,9 +47,13 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
                                 key={movie.id}
                                 src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path
                                     }`}
-                                alt={movie.name}
-                            />
-                        ))}
+                                alt={movie.name} />
+                        )
+                          /*   (<span className="row__posters__titles">
+                                {movie?.name || movie?.original_name || movie?.title}
+                            </span>
+                            )
+                             */)}
             </div>
 
         </div>
