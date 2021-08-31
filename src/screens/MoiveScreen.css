@@ -1,0 +1,62 @@
+.movieScreen {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movieScreen__img img {
+    height: 450px;
+}
+
+.movieScreen__details {
+    width: 40%;
+    padding-left: 25px;
+    padding-bottom: 50px;
+}
+
+.movieScreen__details h1 {
+    margin-bottom: 20px;
+}
+
+.movieScreen__details span {
+    margin-right: 5px;
+}
+
+.movieScreen__details p {
+    margin-top: 20px;
+}
+
+.movieScreen__details h1 {
+    font-size: 50px;
+}
+
+.movieScreen__details__icons {
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
+    align-items: center;
+}
+
+.movieScreen__details__icons__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(0, 18, 97);
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.movieScreen__details__icons__play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.movieScreen__details__icons__play:hover {
+    color: rgb(214, 214, 214);
+}

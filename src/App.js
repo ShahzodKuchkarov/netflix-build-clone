@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import LoginScreen from './screens/LoginScreen';
 import { useSelector } from 'react-redux'
 import ProfileScreen from './screens/ProfileScreen';
+import MovieScreen from './screens/MovieScreen';
 
 function App() {
   const user = useSelector((state) => state?.user?.user);
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route exact path="/">
               <Homescreen />
+            </Route>
+            <Route exact path="/movie/:id">
+              <MovieScreen />
             </Route>
           </Switch>
         )}

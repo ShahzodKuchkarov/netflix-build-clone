@@ -14,3 +14,11 @@ export const clearUserAction = () => {
         type: actionTypes.CLEAR_USER,
     }
 }
+
+
+export const saveMovie = (payload) => {
+    return {
+        payload,
+        type: actionTypes.SAVE_MOVIE,
+    }
+};

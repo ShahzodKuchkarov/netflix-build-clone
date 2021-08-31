@@ -1,7 +1,8 @@
 import * as actionTypes from '../actionTypes';
 
 const initialState = {
-  user: null
+  user: null,
+  movie: null
 };
 
 const userReducer = (state = initialState, action) => {
@@ -11,6 +12,12 @@ const userReducer = (state = initialState, action) => {
       return {
         ...state,
         user: action.payload
+      }
+    }
+    case actionTypes.SAVE_MOVIE: {
+      return {
+        ...state,
+        movie: action.payload
       }
     }
     case actionTypes.CLEAR_USER: {
