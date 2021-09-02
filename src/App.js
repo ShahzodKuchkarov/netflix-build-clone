@@ -20,7 +20,7 @@ function App() {
           <LoginScreen />
         ) : (
           <Switch>
-            <Route path='/profile'>
+            <Route exact path='/profile'>
               <ProfileScreen />
             </Route>
             <Route exact path="/">

@@ -9,14 +9,16 @@ import { Main } from './MovieScreenStyle';
 function MovieScreen() {
 
     const [isOpen, setOpen] = useState(false);
+
     const [state, setState] = useState({
         like: false,
         mark: false,
         star: false
     });
-    /* const [like, setLike] = useState(false); */
 
     const movie = useSelector((state) => state.user.movie);
+
+    console.log(movie);
 
     const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -54,16 +56,21 @@ function MovieScreen() {
                 </div>
                 <h3>Overview</h3>
                 <p className="movieScreen__details__overview">{movie.overview}</p>
-                <p className="movieScreen__details__country">
-                    <span>Country Origin:</span>
-                    <span>{movie.origin_country[0]}</span>
-                </p>
+                {
+                    movie.origin_country ?
+                        <p className="movieScreen__details__country">
+                            <span>Country Origin:</span>
+                            <span>{movie.origin_country[0]}</span>
+                        </p> :
+                        ""
+                }
+
                 <p className="movieScreen__details__date">
                     <span>
                         First air date:
                     </span>
                     <span>
-                        {movie.first_air_date}
+                        {movie.first_air_date || movie.release_date}
                     </span>
                 </p>
 
